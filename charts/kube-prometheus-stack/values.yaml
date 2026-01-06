@@ -1510,7 +1510,8 @@ grafana:
     #  namespace: monitoring  (defaults to use the namespace this chart is deployed to)
 
     # labels for the ServiceMonitor
-    labels: {}
+    labels:
+      release: {{ $.Release.Name | quote }}
 
     # Scrape interval. If not set, the Prometheus default scrape interval is used.
     #
